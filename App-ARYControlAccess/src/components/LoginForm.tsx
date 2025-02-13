@@ -1,24 +1,56 @@
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import React, { useState } from 'react';
+import { View, TextInput, Button, StyleSheet, Text } from 'react-native';
 
 const LoginForm = () => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const handleLogin = () => {
+
+        console.log('Email:', email);
+        console.log('Password:', password);
+    };
+
     return (
-        <View style={styles.container}>
-            <Text style={styles.heading}>Formulario de Login</Text>
+        <View style={styles.formContainer}>
+
+
+            <TextInput
+                style={styles.input}
+                placeholder="Email"
+                value={email}
+                onChangeText={setEmail}
+                keyboardType="email-address"
+            />
+            <TextInput
+                style={styles.input}
+                placeholder="Password"
+                value={password}
+                onChangeText={setPassword}
+                secureTextEntry
+            />
+            <Button title="Login" onPress={handleLogin} />
+
         </View>
     );
 };
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        padding: 20,
+    formContainer: {
+        width: '100%',
+        paddingHorizontal: 20,
     },
-    heading: {
-        fontSize: 24,
-        fontWeight: 'bold',
+    input: {
+        height: 40,
+        borderColor: '#ccc',
+        borderWidth: 1,
+        borderRadius: 5,
+        marginBottom: 10,
+        paddingLeft: 10,
+    },
+    text: {
+        marginTop: 10,
+        textAlign: 'center',
     },
 });
 

@@ -27,6 +27,29 @@ Para instalar y ejecutar este proyecto localmente, sigue estos pasos:
    ```bash
    git clone https://github.com/Yoval128/AryAcesses-App.git
 
+## Estructura del Proyecto
+
+App-ARYControlAccess/
+│── .expo/
+│── .idea/
+│── assets/                   # Recursos estáticos (imágenes, íconos, etc.)
+│── constants/                # Variables y configuraciones globales
+│── node_modules/             # Dependencias de npm
+│── src/
+│   ├── components/           # Componentes reutilizables
+│   ├── contexts/             # Contextos de la app
+│   ├── hooks/                # Hooks personalizados
+│   ├── navigation/           # Configuración de la navegación
+│   ├── screens/              # Pantallas de la app
+│   ├── services/             # Comunicación con la API
+│   ├── utils/                # Funciones utilitarias
+│── .gitignore
+│── app.json
+│── package-lock.json
+│── package.json
+│── tsconfig.json
+
 ## Dependencias necesarias para el correcto desarrollo
    ```bash
    npm install @react-navigation/native @react-navigation/stack react-native-gesture-handler react-native-reanimated react-native-screens
+   npm install @react-navigation/stack 
