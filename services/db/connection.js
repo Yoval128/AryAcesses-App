@@ -7,6 +7,7 @@ const connection = mysql.createConnection({
   database: 'db_ary'
 });
 
+
 connection.connect((err) => {
   if (err) {
     console.error('Error de conexión a la base de datos:', err);
