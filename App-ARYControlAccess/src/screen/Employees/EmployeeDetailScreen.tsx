@@ -1,18 +1,15 @@
 import React from 'react';
 import {View, Text, StyleSheet, Image} from 'react-native';
-import LoginForm from '../../components/Auth/LoginForm'
+import EmployeeDetail from "../../components/Employees/EmployeeDetail";
 
-const LoginScreen = () => {
+const EmployeeDetailScreen = () => {
     return (
         <View style={styles.container}>
-            <Image style={{width: 100, height: 100, marginBottom: 15}}
-                   source={require("../../../assets/icons/login-icon.png")} />
-            <Text style={styles.heading}>Login</Text>
-            <LoginForm />
+            <Text style={styles.heading}>Detalle Empleado</Text>
+            <EmployeeDetail/>
         </View>
-    );
+    )
 };
-
 const styles = StyleSheet.create({
     container: {
         flex: 1,
@@ -27,4 +24,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default LoginScreen;
+export default EmployeeDetailScreen;

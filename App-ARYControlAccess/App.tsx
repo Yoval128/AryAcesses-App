@@ -1,9 +1,13 @@
-
 import React from 'react';
-import Navigation from './src/navigation/Navigation';
+import { AuthProvider } from './src/contexts/AuthContext';  // Importa el contexto
+import AppNavigator from './src/navigation/AppNavigator';  // Importa el navegador principal
 
 const App = () => {
-  return <Navigation />;
+    return (
+        <AuthProvider>
+            <AppNavigator />
+        </AuthProvider>
+    );
 };
 
 export default App;
